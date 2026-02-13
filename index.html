@@ -1,17 +1,117 @@
-
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>Hasib026</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hasib026 - Official</title>
     <style>
-        body { background-color: #000; color: #fff; text-align: center; font-family: sans-serif; padding-top: 100px; }
-        .btn { background: red; color: white; padding: 15px 30px; text-decoration: none; border-radius: 30px; font-weight: bold; display: inline-block; margin-top: 20px; }
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #050505; /* Deep Black */
+            color: #fff;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .container {
+            text-align: center;
+            z-index: 1;
+        }
+
+        /* BIG GLOWING LOGO */
+        .logo-main {
+            font-size: 100px;
+            margin-bottom: 10px;
+            filter: drop-shadow(0 0 20px #ff0000);
+            animation: float 3s ease-in-out infinite;
+        }
+
+        /* FLOATING ANIMATION */
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+
+        /* BIG ANIMATED TEXT */
+        h1 {
+            font-size: 5rem;
+            margin: 0;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            background: linear-gradient(90deg, #fff, #ff0000, #fff);
+            background-size: 200%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: shine 3s linear infinite;
+        }
+
+        @keyframes shine {
+            to { background-position: 200%; }
+        }
+
+        p {
+            font-size: 1.5rem;
+            color: #ccc;
+            margin: 20px 0 40px 0;
+            font-weight: 300;
+        }
+
+        /* GLOWING BUTTON */
+        .btn {
+            padding: 20px 50px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+            background: #ff0000;
+            border-radius: 50px;
+            box-shadow: 0 0 20px rgba(255, 0, 0, 0.6);
+            transition: 0.3s;
+            display: inline-block;
+            text-transform: uppercase;
+        }
+
+        .btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 40px rgba(255, 0, 0, 0.9);
+            background: #ff3333;
+        }
+
+        /* BACKGROUND GLOWS */
+        .bg-glow {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background: rgba(255, 0, 0, 0.1);
+            filter: blur(100px);
+            border-radius: 50%;
+            z-index: -1;
+            animation: move 10s infinite alternate;
+        }
+
+        @keyframes move {
+            from { top: 10%; left: 10%; }
+            to { top: 70%; left: 80%; }
+        }
     </style>
 </head>
 <body>
-    <div style="font-size: 80px;">▶️</div>
-    <h1>Hasib026</h1>
-    <p>Something amazing is coming soon.</p>
-    <a href="https://youtube.com/@hasib026?si=xolBvgU6OIbyUAUh" class="btn">Subscribe on YouTube</a>
+
+    <div class="bg-glow"></div>
+
+    <div class="container">
+        <div class="logo-main">▶</div>
+        <h1>Hasib026</h1>
+        <p>Something Massive is Coming...</p>
+        <a href="https://youtube.com/@hasib026?si=xolBvgU6OIbyUAUh" target="_blank" class="btn">
+            Join the Journey
+        </a>
+    </div>
+
 </body>
 </html>
-
